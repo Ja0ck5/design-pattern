@@ -17,6 +17,25 @@ package com.ja0ck5.dp.prototype;
  * 3. 想解耦框架与生成的实例时
  * 想让生成实例的框架不依赖于具体的类。这个时候，不能指定类名来生成实例.
  * 要事先 注册 一个 原型 实例。 然后通过复制该实例来生成实例。
+ *
+ *
+ * 相关的设计模式
+ *
+ * 1. Flyweight 模式
+ * Prototype 模式可以生成一个与当前实例的状态完全一样的实例
+ * Flyweight 模式 可以在不同的地方使用同一个实例
+ *
+ * 2. Memento 模式
+ * Prototype 模式可以生成一个与当前实例的状态完全一样的实例
+ * Memento 模式 可以保存当前实例的状态,以实现快照和撤销功能
+ *
+ * 3. Composite 模式 和 Decorator 模式
+ * 经常使用 Composite 模式 和 Decorator 模式 时,需要动态地创建复杂结构的实例.这个时候可以使用 Prototype 模式
+ *
+ * 4. Command 模式
+ * 想要复制 Command 模式中出现的命令，可以使用 prototype 模式
+ *
+ *
  */
 public class Prototype {
 }
