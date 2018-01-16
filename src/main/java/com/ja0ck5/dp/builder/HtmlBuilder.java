@@ -21,14 +21,24 @@ public class HtmlBuilder extends Builder {
     }
 
     public void makeString(String str) {
-
+        writer.println("<p>" + str + "</p>");
     }
 
     public void makeItems(String[] items) {
-
+        writer.println("<ul>");
+        for (String item : items) {
+            writer.println("<li>" + item + "</li>");
+        }
+        writer.println("</ul>");
     }
 
     public void close() {
-
+        writer.println("</body></html>");
+        writer.close();
     }
+
+    public String getResult() {
+        return filename;
+    }
+
 }
